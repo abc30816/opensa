@@ -1,0 +1,186 @@
+{
+  "note": "See the linked research file SCM_VM_STATIC_MAP.md for interpretation and caveats. This JSON is generated from the supplied gta_sa.exe as static data; the EXE is not executed.",
+  "top_level_groups": [
+    {
+      "group": 0,
+      "range": "0000-0063",
+      "handler": "0x00465EE0"
+    },
+    {
+      "group": 1,
+      "range": "0064-00C7",
+      "handler": "0x00466E60"
+    },
+    {
+      "group": 2,
+      "range": "00C8-012B",
+      "handler": "0x00469410"
+    },
+    {
+      "group": 3,
+      "range": "012C-018F",
+      "handler": "0x0047C180"
+    },
+    {
+      "group": 4,
+      "range": "0190-01F3",
+      "handler": "0x0047D290"
+    },
+    {
+      "group": 5,
+      "range": "01F4-0257",
+      "handler": "0x0047E110"
+    },
+    {
+      "group": 6,
+      "range": "0258-02BB",
+      "handler": "0x0047F3F0"
+    },
+    {
+      "group": 7,
+      "range": "02BC-031F",
+      "handler": "0x0047FAB0"
+    },
+    {
+      "group": 8,
+      "range": "0320-0383",
+      "handler": "0x00481380"
+    },
+    {
+      "group": 9,
+      "range": "0384-03E7",
+      "handler": "0x00483C50"
+    },
+    {
+      "group": 10,
+      "range": "03E8-044B",
+      "handler": "0x00489580"
+    },
+    {
+      "group": 11,
+      "range": "044C-04AF",
+      "handler": "0x0048A3A0"
+    },
+    {
+      "group": 12,
+      "range": "04B0-0513",
+      "handler": "0x0048B610"
+    },
+    {
+      "group": 13,
+      "range": "0514-0577",
+      "handler": "0x0048CE50"
+    },
+    {
+      "group": 14,
+      "range": "0578-05DB",
+      "handler": "0x0048EB20"
+    },
+    {
+      "group": 15,
+      "range": "05DC-063F",
+      "handler": "0x00490E30"
+    },
+    {
+      "group": 16,
+      "range": "0640-06A3",
+      "handler": "0x00494060"
+    },
+    {
+      "group": 17,
+      "range": "06A4-0707",
+      "handler": "0x00496E80"
+    },
+    {
+      "group": 18,
+      "range": "0708-076B",
+      "handler": "0x0046D0D0"
+    },
+    {
+      "group": 19,
+      "range": "076C-07CF",
+      "handler": "0x0046B4E0"
+    },
+    {
+      "group": 20,
+      "range": "07D0-0833",
+      "handler": "0x00472390"
+    },
+    {
+      "group": 21,
+      "range": "0834-0897",
+      "handler": "0x00470B10"
+    },
+    {
+      "group": 22,
+      "range": "0898-08FB",
+      "handler": "0x00474980"
+    },
+    {
+      "group": 23,
+      "range": "08FC-095F",
+      "handler": "0x00476350"
+    },
+    {
+      "group": 24,
+      "range": "0960-09C3",
+      "handler": "0x00478080"
+    },
+    {
+      "group": 25,
+      "range": "09C4-0A27",
+      "handler": "0x0047A7E0"
+    },
+    {
+      "group": 26,
+      "range": "0A28-0A8B",
+      "handler": "0x00479E20"
+    }
+  ],
+  "group_0": {
+    "dispatch_table": "0x00466CD0",
+    "entries": 100,
+    "unique_handler_destinations": 86,
+    "shared_fallback": "0x00466CBA",
+    "fallback_opcode_count": 15
+  },
+  "group_1": {
+    "dispatch_table": "0x004683E4",
+    "entries": 97,
+    "range": "0x0064-0x00C4",
+    "unique_handler_destinations": 82,
+    "shared_fallback": "0x004683CF",
+    "fallback_table_opcode_count": 15,
+    "additional_out_of_range": [
+      "0x00C5",
+      "0x00C6",
+      "0x00C7"
+    ]
+  },
+  "group_2": {
+    "handler": "0x00469410",
+    "translation_table": "0x00469ECC",
+    "handler_table": "0x00469E54",
+    "opcode_first": "0x00D6",
+    "opcode_count": 84,
+    "opcode_last": "0x0129",
+    "unique_handler_destinations": 30,
+    "fallback": "0x00469E3D",
+    "fallback_opcode_count": 39,
+    "non_fallback_handler_destinations": 29
+  },
+  "input_operands": {
+    "function": "0x00464100",
+    "dispatch_table": "0x004642A4",
+    "type_count": 8,
+    "scratch_area": "0x00A462F8"
+  },
+  "output_destinations": {
+    "function": "0x004643F0",
+    "dispatch_table": "0x0046455C",
+    "table_type_range": "2-8",
+    "type_count": 7,
+    "type_1_default": "0x00464549",
+    "shared_fallback": "0x014BA2A4"
+  }
+}
