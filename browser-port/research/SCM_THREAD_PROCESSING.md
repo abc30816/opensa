@@ -77,3 +77,8 @@ The current project maps these structures only. No browser thread scheduler or c
 3. Establish the meaning of `+0xBC`, `+0xC0`, `+0xCC`, `+0xC4`, `+0xD8), and `+0xDC` from writes and consumers.
 4. Match each command handler to documented opcode signatures, then validate against the user's local MAIN.SCM and SCRIPT.IMG after the local inspector has been audited.
 5. Build deterministic tests for multiple scripts, wait/yield/resume and story mission progression.
+
+
+## Pool and lifecycle follow-up
+
+See [SCM_THREAD_LIFECYCLE.md](SCM_THREAD_LIFECYCLE.md): startup at `0x00468DD0` initializes 96 fixed-size (`0xE0` byte) records, constructor `0x00464960` sets the `noname` record label and script fields, active-list insertion is visible at `0x0050079F`, and name-based cleanup compares record `+0x08` before calling protected list helpers and the destructor. The exact pool-slot recycling semantics remain unknown because the relevant helpers jump into `.dev1`.
