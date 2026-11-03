@@ -182,5 +182,36 @@
     "type_count": 7,
     "type_1_default": "0x00464549",
     "shared_fallback": "0x014BA2A4"
+  },
+  "thread_records": {
+    "pool_init_va": "0x00468DD0",
+    "constructor_va": "0x00464960",
+    "pool_start_va": "0x00A8DAB0",
+    "pool_end_exclusive_va": "0x00A92EB0",
+    "record_stride_bytes": 224,
+    "record_count": 96,
+    "active_list_head_global_va": "0x00A8DAAC",
+    "secondary_list_head_global_va": "0x00A8DAA8",
+    "default_name_va": "0x0085AD44",
+    "default_name": "noname",
+    "active_insert_callback_va": "0x0050079F",
+    "observed_record_offsets": {
+      "next_link": "0x00",
+      "previous_link": "0x04",
+      "script_name": "0x08",
+      "instruction_pointer": "0x14",
+      "active_flag": "0xC4",
+      "script_type": "0xC9",
+      "opcode_high_bit_flag": "0xD2",
+      "thread_flag": "0xD3",
+      "resume_control": "0xD8"
+    },
+    "evidence_notes": [
+      "Startup initializes 96 fixed-size records in the supplied binary.",
+      "The constructor copies the default name noname and clears the instruction cursor.",
+      "The visible active-list callback prepends the record, sets the initial cursor and sets active flag +0xC4.",
+      "Name-based cleanup compares +0x08 and calls two list-management helpers followed by a destructor.",
+      "The list helpers and create_thread allocation helper transfer into .dev1; their internals are not inspected and secondary-list recycling semantics remain unverified."
+    ]
   }
 }
