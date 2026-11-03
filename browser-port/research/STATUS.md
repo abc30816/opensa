@@ -23,7 +23,10 @@ New function-level findings:
 - entrypoint-call-trace.md: startup path and a candidate top-level application/message-loop routine.
 - application-state-dispatch.md: ten application-state handlers, not yet semantically named.
 - asset-path-crossrefs.md: paths and candidate parsers for GTA3.IMG, GTA_INT.IMG, PLAYER.IMG, GTA.DAT, TIMECYC.DAT and HANDLING.CFG.
-- main-scm-loader-and-opcode-dispatch.md: the program opens data/script/main.scm, reads a 200,000-byte region, and contains an opcode/operand dispatcher for 0x00D6–0x0129. The thread's bytecode cursor is observed at object offset +0x14. Only one opcode range is mapped; the full script VM and command semantics are not yet reconstructed.
+- main-scm-loader-and-opcode-dispatch.md: the program opens data/script/main.scm, reads a 200,000-byte region, and contains an opcode/operand dispatcher for 0x00D6–0x0129. The thread's bytecode cursor is observed at object offset +0x14.
+- SCM_VM_STATIC_MAP.md and SCM_DISPATCH_MAP.json: mapped all 27 top-level opcode groups, the direct group-0/group-1 tables, group-2's 84-opcode second-level dispatch map, typed input operands and output destination handlers.
+- SCM_GROUP2_COMMAND_CROSSCHECK.md and SCM_GROUP2_COMMAND_CROSSCHECK.json: cross-checked 26 selected group-2 command parameter totals against a community SASCM.INI reference and the binary's separate input/output counts. These are selected checks, not a complete opcode catalogue.
+- SCM_THREAD_PROCESSING.md and SCM_THREAD_LIFECYCLE.md: mapped the global script update pass, per-thread command runner, a 96-record fixed-size pool, thread-record constructor, active-list insertion and name-based cleanup call sites. Protected list-management/allocation helpers remain uninspected.
 - SCM_VM_STATIC_MAP.md and SCM_DISPATCH_MAP.json: mapped all 27 top-level opcode groups, the direct opcode tables for groups 0 and 1, the group-2 second-level route table, and typed input/output operand and variable-destination readers.
 - SCM_THREAD_PROCESSING.md: mapped the global script update pass at 0x0046A080 and per-thread runner at 0x00469F80, including linked-record traversal, command-loop yield/budget behavior and observed thread fields. This is a static map, not an implemented browser scheduler.
 
@@ -43,7 +46,7 @@ OpenSA contains parsers/builders and engine subsystems that can reduce duplicate
 
 ## Next implementation/research gates
 
-1. Map the remaining SCM opcode ranges and running-script scheduler; validate definitions against the user's actual MAIN.SCM and SCRIPT.IMG when safely available.
+1. Map remaining SCM opcode handlers and exact thread-slot allocation/recycling behavior without following protected .dev1 pointers; validate definitions against the user's actual MAIN.SCM and SCRIPT.IMG when safely available.
 2. Map renderer/world/streaming entry points and distinguish them from protected .dev1 redirection points; do not follow or bypass protected regions.
 3. Reuse/adapt OpenSA's licensed format readers and world/render pipeline where they match the target, while tracking each missing full-game system as a separate tested feature.
 4. Extend format support to the actual user's game files without uploading copyrighted assets.
