@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>San Andreas — Reverse Engineering Workbench</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">BROWSER PORT DEVELOPMENT</p>
+          <h1>San Andreas <span>RE Workbench</span></h1>
+          <p class="intro">First step: inspect the original PC executable without running it or uploading it.</p>
+        </div>
+        <div class="status" id="status" role="status" aria-live="polite">Waiting for a local file</div>
+      </header>
+
+      <section class="warning" aria-label="Safety information">
+        <strong>Static inspection only.</strong>
+        <span>The selected EXE is read as data. It is never launched, changed, or uploaded. The game-folder scan reads names and file sizes only.</span>
+      </section>
+
+      <section class="actions">
+        <article class="panel">
+          <div class="step">01</div>
+          <h2>Inspect gta_sa.exe</h2>
+          <p>Select the executable from your own installation. The report includes PE architecture, sections, imported Windows libraries/functions, entry-point bytes and selected engine-related strings.</p>
+          <button id="pick-exe" type="button">Choose gta_sa.exe</button>
+          <p class="fine">Only the chosen EXE is read. It is not executed or sent anywhere.</p>
+        </article>
+        <article class="panel">
+          <div class="step">02</div>
+          <h2>Identify game data</h2>
+          <p>Choose the GTA San Andreas installation folder. The scan checks expected paths and file sizes without reading the contents of your IMG, SCM, audio or model files.</p>
+          <button id="pick-folder" type="button" class="secondary">Choose game folder</button>
+          <p class="fine">Requests read-only folder access. Do not select your whole Documents or Downloads folder.</p>
+        </article>
+      </section>
+
+      <section class="panel report-panel">
+        <div class="report-head">
+          <div>
+            <p class="eyebrow">ANALYSIS OUTPUT</p>
+            <h2 id="report-title">No executable inspected</h2>
+          </div>
+          <button id="copy-report" type="button" class="small secondary" disabled>Copy report</button>
+        </div>
+        <pre id="report" aria-live="polite">Select your own gta_sa.exe to begin static inspection.</pre>
+      </section>
+
+      <footer>
+        <span>Development branch: gta-sa-browser-engine</span>
+        <span>No game assets are included in this project.</span>
+      </footer>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
