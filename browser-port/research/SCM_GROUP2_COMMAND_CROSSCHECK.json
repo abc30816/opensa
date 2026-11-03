@@ -1,0 +1,33 @@
+{
+  "target_executable_sha256": "af63c3b85c5a30a1fb4318ede6add911933ccc63ddac2f57eb63b7fbe212b8e2",
+  "scope": "Selected commands in opcode group 2; not a complete opcode definition set.",
+  "definitions_reference": "Community SASCM.INI copy from sr-tream/CleoDecompiler/tests/Files for tests/SASCM.INI; official Sanny Builder docs define the SASCM.INI line count as the total number of command parameters. Used as a cross-check only; exact target-version match still requires local MAIN.SCM validation.",
+  "commands": [
+    {"opcode":"0x00D6","name":"if","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x0046944F","count_check":"PASS"},
+    {"opcode":"0x00D7","name":"create_thread","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x004694BA","count_check":"PASS"},
+    {"opcode":"0x00D8","name":"mission_cleanup","documented_parameter_count":0,"binary_input_operand_count":0,"binary_output_destination_count":0,"handler_va":"0x004694DE","count_check":"PASS"},
+    {"opcode":"0x00D9","name":"actor car add to mission cleanup","documented_parameter_count":2,"binary_input_operand_count":1,"binary_output_destination_count":1,"handler_va":"0x004694FD","count_check":"PASS"},
+    {"opcode":"0x00DB","name":"actor in_car","documented_parameter_count":2,"binary_input_operand_count":2,"binary_output_destination_count":0,"handler_va":"0x00469629","count_check":"PASS"},
+    {"opcode":"0x00DD","name":"actor driving_car_with_model","documented_parameter_count":2,"binary_input_operand_count":2,"binary_output_destination_count":0,"handler_va":"0x0046968E","count_check":"PASS"},
+    {"opcode":"0x00DF","name":"actor driving","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x004696E7","count_check":"PASS"},
+    {"opcode":"0x00E1","name":"player pressed_key","documented_parameter_count":2,"binary_input_operand_count":2,"binary_output_destination_count":0,"handler_va":"0x00469738","count_check":"PASS"},
+    {"opcode":"0x00E2","name":"get_player key state_to","documented_parameter_count":3,"binary_input_operand_count":2,"binary_output_destination_count":1,"handler_va":"0x00469795","count_check":"PASS"},
+    {"opcode":"0x0107","name":"create_object","documented_parameter_count":5,"binary_input_operand_count":4,"binary_output_destination_count":1,"handler_va":"0x004697EF","count_check":"PASS"},
+    {"opcode":"0x0108","name":"destroy_object","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x00469942","count_check":"PASS"},
+    {"opcode":"0x0109","name":"player money change","documented_parameter_count":2,"binary_input_operand_count":2,"binary_output_destination_count":0,"handler_va":"0x004699A2","count_check":"PASS"},
+    {"opcode":"0x010A","name":"player money greater-than test","documented_parameter_count":2,"binary_input_operand_count":2,"binary_output_destination_count":0,"handler_va":"0x004699CE","count_check":"PASS"},
+    {"opcode":"0x010B","name":"get player money","documented_parameter_count":2,"binary_input_operand_count":1,"binary_output_destination_count":1,"handler_va":"0x00469A0A","count_check":"PASS"},
+    {"opcode":"0x010D","name":"set_player wanted_level","documented_parameter_count":2,"binary_input_operand_count":2,"binary_output_destination_count":0,"handler_va":"0x00469A3B","count_check":"PASS"},
+    {"opcode":"0x010E","name":"set_player minimum_wanted_level","documented_parameter_count":2,"binary_input_operand_count":2,"binary_output_destination_count":0,"handler_va":"0x00469A68","count_check":"PASS"},
+    {"opcode":"0x010F","name":"player wanted_level greater-than test","documented_parameter_count":2,"binary_input_operand_count":2,"binary_output_destination_count":0,"handler_va":"0x00469A95","count_check":"PASS"},
+    {"opcode":"0x0110","name":"clear_player wanted_level","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x00469AD2","count_check":"PASS"},
+    {"opcode":"0x0111","name":"set_wasted_busted_check","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x00469AFB","count_check":"PASS"},
+    {"opcode":"0x0112","name":"wasted_or_busted","documented_parameter_count":0,"binary_input_operand_count":0,"binary_output_destination_count":0,"handler_va":"0x00469B1B","count_check":"PASS"},
+    {"opcode":"0x0114","name":"set_actor weapon add_ammo","documented_parameter_count":3,"binary_input_operand_count":3,"binary_output_destination_count":0,"handler_va":"0x00469B28","count_check":"PASS"},
+    {"opcode":"0x0117","name":"player wasted","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x00469B5E","count_check":"PASS"},
+    {"opcode":"0x0118","name":"actor dead","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x00469B93","count_check":"PASS"},
+    {"opcode":"0x0119","name":"car wrecked","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x00469BED","count_check":"PASS"},
+    {"opcode":"0x0122","name":"player pressing_horn","documented_parameter_count":1,"binary_input_operand_count":1,"binary_output_destination_count":0,"handler_va":"0x00469C51","count_check":"PASS"},
+    {"opcode":"0x0129","name":"create_actor_pedtype_in_car_driverseat","documented_parameter_count":4,"binary_input_operand_count":3,"binary_output_destination_count":1,"handler_va":"0x00469CBA","count_check":"PASS"}
+  ]
+}
