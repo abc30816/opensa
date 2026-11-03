@@ -24,6 +24,8 @@ New function-level findings:
 - application-state-dispatch.md: ten application-state handlers, not yet semantically named.
 - asset-path-crossrefs.md: paths and candidate parsers for GTA3.IMG, GTA_INT.IMG, PLAYER.IMG, GTA.DAT, TIMECYC.DAT and HANDLING.CFG.
 - main-scm-loader-and-opcode-dispatch.md: the program opens data/script/main.scm, reads a 200,000-byte region, and contains an opcode/operand dispatcher for 0x00D6–0x0129. The thread's bytecode cursor is observed at object offset +0x14. Only one opcode range is mapped; the full script VM and command semantics are not yet reconstructed.
+- SCM_VM_STATIC_MAP.md and SCM_DISPATCH_MAP.json: mapped all 27 top-level opcode groups, the direct opcode tables for groups 0 and 1, the group-2 second-level route table, and typed input/output operand and variable-destination readers.
+- SCM_THREAD_PROCESSING.md: mapped the global script update pass at 0x0046A080 and per-thread runner at 0x00469F80, including linked-record traversal, command-loop yield/budget behavior and observed thread fields. This is a static map, not an implemented browser scheduler.
 
 All analysis is static. The original executable has not been run, emulated, injected into, unpacked or modified. SecuROM has not been bypassed.
 
